@@ -1,0 +1,25 @@
+// Place all the styles related to the surveies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.radio{
+	width:200px;
+	margin-right:10px;
+	color:#888;
+}
+
+.control-group{
+	line-height:40px;
+}
+
+.radio_buttons{
+	margin-right:5px;
+}
+input[type="radio"], input[type="checkbox"] {
+	margin:4px 4px;
+	margin-top: 1px \9;
+	line-height: normal;
+}
+em{
+	color:red;
+}

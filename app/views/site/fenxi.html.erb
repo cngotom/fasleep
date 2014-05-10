@@ -1,0 +1,18 @@
+<div class="container" >
+	<div class="lead text-center" style="padding-top:80px;" >
+
+		<% if @type == "F-E0" %>
+			恭喜您！您暂时不需要在快睡好眠做保健！
+		<% elsif @type == "F-E1" %>
+			您目前不适合在本场所进行相关的保健工作，请在适当的时候再来做保健。
+		<% else %>
+
+			根据您的体制，您适用于适用药方 <strong ><%= @type %> </strong>
+		<% end %>
+
+		<div class="text-center" style="padding-top:20px;" >
+			<button class="btn btn-success" onclick="javascript:window.history.back()">  重新测试 </button>
+		</div>
+	</div>
+
+</div>
