@@ -38,3 +38,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'simple_form'
+
+
+gem 'execjs'
+gem 'therubyracer'
