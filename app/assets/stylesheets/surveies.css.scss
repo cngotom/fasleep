@@ -7,7 +7,19 @@ body{
 }
 
 .font-large{
-	font-size:32px;
+        font-size:46px;
+}
+
+.font-large .radio{
+	margin-top:14px;
+}
+
+.font-large .radio input{
+	height:40px;
+}
+
+.font-large .btn{
+	 font-size:46px;
 }
 
 .radio{
