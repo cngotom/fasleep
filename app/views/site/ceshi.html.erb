@@ -1,25 +1,26 @@
 <div class="container">
-
-    <div class="col-md-12">
-        <h2 class="text-center"> 快睡好眠快速测试题 </h2>
-        
-        <p class＝"lead"> 尊敬的朋友：</p>
-        <div style="text-indent:2em">
-            <p class＝"lead">    欢迎您来到快睡好眠科技有限公司！为了使您不虚此行，请针对一下项目选择出您认为和您的现状最接近的答案。</p>
-        </div>
+    <div class="row-fluid">
+        <div class="col-md-12">
+            <h2 class="text-center"> 快睡好眠快速测试题 </h2>
             
+            <p class＝"lead"> 尊敬的朋友：</p>
+            <div style="text-indent:2em">
+                <p class＝"lead">    欢迎您来到快睡好眠科技有限公司！为了使您不虚此行，请针对一下项目选择出您认为和您的现状最接近的答案。</p>
+            </div>
+                
 
-        <%= simple_form_for @survey ,:html => { :class => 'form-inline' ,:id=>'valid-form'} do |f| %>
+            <%= simple_form_for @survey ,:html => { :class => 'form-inline' ,:id=>'valid-form'} do |f| %>
 
-            <%@data.each_with_index do |item, index|%>
-                <%= f.input "answer_#{index}".to_sym,  as: :radio_buttons, collection: to_collections(item['a']), label: to_label(index,item['q']) %>
-            <%end%>
+                <%@data.each_with_index do |item, index|%>
+                    <%= f.input "answer_#{index}".to_sym,  as: :radio_buttons, collection: to_collections(item['a']), label: to_label(index,item['q']) %>
+                <%end%>
 
-           <div class="text-center lead">
-                <%= f.button :submit,:value=>'提交',:class=>'btn btn-primary' %>
-           </div>
-        <% end %>
+               <div class="text-center lead">
+                    <%= f.button :submit,:value=>'提交',:class=>'btn btn-primary' %>
+               </div>
+            <% end %>
 
+        </div>
     </div>
 </div>
 
@@ -28,7 +29,8 @@
 <script type="text/javascript">
             // Validation
             $(function() {
-
+                $('.controls').addClass('row-fluid clearfix');
+                $('label.radio').addClass('col-xs-12 col-md-2');
                 $('.survey_answer_12').hide();
 
                 $(".survey_answer_0 input[type='radio']").click(function(){
