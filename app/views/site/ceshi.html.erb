@@ -9,7 +9,7 @@
             
             <p class＝"lead"> 尊敬的朋友：</p>
             <div style="text-indent:2em">
-                <p class＝"lead">    欢迎您来到快睡好眠科技有限公司！为了使您不虚此行，请针对一下项目选择出您认为和您的现状最接近的答案。</p>
+                <p class＝"lead">    欢迎您来到快睡好眠科技有限公司！为了使您不虚此行，请针对以下项目选择出您认为和您的现状最接近的答案。</p>
             </div>
                 
 
@@ -17,6 +17,7 @@
 
                 <%@data.each_with_index do |item, index|%>
                     <%= f.input "answer_#{index}".to_sym,  as: :radio_buttons, collection: to_collections(item['a']), label: to_label(index,item['q']) %>
+                    <br>
                 <%end%>
 
                <div class="text-center lead">

@@ -1,5 +1,5 @@
 Fasleep::Application.routes.draw do
-  get "site/ceshi"
+  get "site/ceshi",:as => :ceshi 
 
   get "site/fenxi"
 
